@@ -1,6 +1,6 @@
 <?php
 
-include_once('config.php');
+include_once('test_db.php');
 $user_fun = new Userfunction();
 
 $json = array();

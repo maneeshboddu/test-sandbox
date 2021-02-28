@@ -69,7 +69,6 @@
 				if(json.status == 0){
 					window.alert(json.msg);
 					$('#tbl_rec').load('record.php');
-					$('#close_click').trigger('click');
 				}
 				else{
 					window.alert(json.msg);
@@ -116,7 +115,6 @@ $(document).on("click", "button.closedata", function(){
 	});
 	//Update Record
 	$('#updata').on("submit", function(e){
-		//e.preventDefault();
 
 		$.ajax({
 
@@ -160,11 +158,10 @@ $(document).on("click", "button.closedata", function(){
 				var json = JSON.parse(data);
 				if(json.status == 0){
 					$('#tbl_rec').load('record.php');
-					$('#de_cancle').trigger("click");
 					window.alert(json.msg);
 				}
 				else{
-					
+					window.alert(json.msg);
 				}
 			}
 		});
